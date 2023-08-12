@@ -1,2 +1,2 @@
-# Clickwheel-PiPod
-The code used for the PiPod project
+# iPodZero
+The code used for the iPodZero project
