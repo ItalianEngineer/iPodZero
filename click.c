@@ -108,6 +108,29 @@ void sendPacket() {
     } else if (buffer[BUTTON_INDEX] == DOWN_BUTTON_BIT && buffer[BUTTON_STATE_INDEX] == 1) {
         system("ncmpcpp next");
     }
+
+    // Function to set the kth bit of n
+int setBit(int n, int k) {
+    return (n | (1 << (k - 1)));
+}
+
+// Function to clear the kth bit of n
+int clearBit(int n, int k) {
+    return (n & (~(1 << (k - 1))));
+}
+
+// Function to set the kth bit of n
+int setBit(int n, int k) {
+    return (n | (1 << (k - 1)));
+}
+
+// Function to clear the kth bit of n
+int clearBit(int n, int k) {
+    return (n & (~(1 << (k - 1))));
+}
+
+void onClockEdge(int gpio, int level, uint32_t tick) {
+
 ///////////////////////////////////////////////////////////////////////////////////
 
 void onClockEdge(int gpio, int level, uint32_t tick) {
@@ -187,4 +210,5 @@ int main(void *args){
 
     };
     gpioTerminate();
+    }
 }
