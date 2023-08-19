@@ -109,16 +109,6 @@ void sendPacket() {
         system("ncmpcpp next");
     }
 
-    // Function to set the kth bit of n
-int setBit(int n, int k) {
-    return (n | (1 << (k - 1)));
-}
-
-// Function to clear the kth bit of n
-int clearBit(int n, int k) {
-    return (n & (~(1 << (k - 1))));
-}
-
 // Function to set the kth bit of n
 int setBit(int n, int k) {
     return (n | (1 << (k - 1)));
@@ -128,8 +118,6 @@ int setBit(int n, int k) {
 int clearBit(int n, int k) {
     return (n & (~(1 << (k - 1))));
 }
-
-void onClockEdge(int gpio, int level, uint32_t tick) {
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -210,5 +198,5 @@ int main(void *args){
 
     };
     gpioTerminate();
-    }
+    return 0; // Return 0 to indicate succesful execution
 }
