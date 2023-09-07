@@ -61,7 +61,7 @@ int main() {
                 break;
             case 10: // Enter key
                 // You can add logic to perform actions based on the selected menu item
-                if (current_item = 5) {
+                if (current_item == 4) {
                     system("sudo shutdown now");
                 }
                 break;
